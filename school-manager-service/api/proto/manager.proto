@@ -1,0 +1,32 @@
+syntax = "proto3";
+package manager;
+option go_package = "github.com/Ara-Chobanyan/school-manager/school-manager-service;pb";
+
+service SchoolManager {
+  rpc Behavior (Helper) returns (StudentList) {};
+  rpc Exceptional (Helper) returns (StudentList) {};
+  }
+
+message Student {
+int32 id = 1;
+string first_name = 2;
+string last_name = 3;
+float grade = 4;
+float behavior = 5;
+float satisfaction = 6;
+bool critical = 7;
+bool exceptional = 8;
+bool tutelary = 9;
+bool staff = 10;
+  }
+
+message Helper {
+    bool status = 1;
+  }
+
+message StudentList {
+    repeated Student students = 1;
+  }
+
+
+message StudentParam {}

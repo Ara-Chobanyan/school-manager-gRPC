@@ -1,0 +1,17 @@
+syntax = "proto3";
+package parent;
+option go_package = "github.com/Ara-Chobanyan/global-grade-service/global-grade-service;pb";
+
+
+service Global{
+    rpc GetGlobalAverage (GlobalParams) returns (GlobalAverage) {};
+  }
+
+
+message GlobalAverage {
+    float grade = 1;
+    float behavior = 2;
+    string status = 3;
+  }
+
+message GlobalParams{}

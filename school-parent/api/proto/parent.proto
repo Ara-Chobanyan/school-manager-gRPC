@@ -1,0 +1,39 @@
+syntax = "proto3";
+package parent;
+option go_package = "github.com/Ara-Chobanyan/school-manager/school-parent;proto";
+
+// The more I think about it I should have it that the service return a message if of success or error
+service ParentManagment {
+    rpc CreateStudent (NewStudent) returns (Student) {};
+    rpc EditStudent (Student) returns (Student) {};
+    rpc DeleteStudent (StudentId) returns (StudentId) {};
+  }
+
+message Student {
+int32 id = 1;
+string first_name = 2;
+string last_name = 3;
+float grade = 4;
+float behavior = 5;
+float satisfaction = 6;
+bool critical = 7;
+bool exceptional = 8;
+bool tutelary = 9;
+bool staff = 10;
+  }
+
+message NewStudent {
+string first_name = 1;
+string last_name = 2;
+float grade = 3;
+float behavior = 4;
+float satisfaction = 5;
+bool critical = 6;
+bool exceptional = 7;
+bool tutelary = 8;
+bool staff = 9;
+  }
+
+message StudentId {
+    int32 id = 1;
+  }

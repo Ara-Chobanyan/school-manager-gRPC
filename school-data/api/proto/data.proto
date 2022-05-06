@@ -1,0 +1,43 @@
+
+syntax = "proto3";
+package parent;
+option go_package = "github.com/Ara-Chobanyan/school-data/school-data;pb";
+
+service DataManagment {
+  rpc GetStudentById (StudentId) returns (Student) {};
+  rpc GetStudentByLastName (StudentLastName) returns (StudentList) {};
+  rpc GetAllStudents (StudentParams) returns (StudentList) {};
+  rpc GetPopulation (StudentParams) returns (Population) {};
+  }
+
+message Student {
+int32 id = 1;
+string first_name = 2;
+string last_name = 3;
+float grade = 4;
+float behavior = 5;
+float satisfaction = 6;
+bool critical = 7;
+bool exceptional = 8;
+bool tutelary = 9;
+bool staff = 10;
+  }
+
+message StudentId {
+    int32 id = 1;
+  }
+
+message StudentLastName {
+    string last_name = 1;
+  }
+
+message StudentList {
+    repeated Student students = 1;
+  }
+
+message Population {
+    int32 teacher = 1;
+    int32 student = 2;
+  }
+
+message StudentParams {}
