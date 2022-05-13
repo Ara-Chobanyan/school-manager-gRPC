@@ -19,3 +19,20 @@ tutor and help there class mates.
 
 #### School Parent Service
 The service adds,deletes and edits data on the database.
+
+# Purpose of Project
+Wanted to create a microservices as well as using gRPC, and implementing it into a real life issue.
+To really try out to make my own project, using all the ideas I have learned. To show
+that I have been making progress on my skills.
+
+# Learned
+- Creating a gRPC.
+- Implementing a hexagonal architecture.
+- Adding data from a database into a slice of structs.
+
+# Issues
+- Implementing authentication for gRPC. 
+- Making mock tests.
+
+# Todos
+- [ ] Dockerize the Project.
